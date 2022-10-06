@@ -15,7 +15,7 @@ public class ATMmachine {
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
             System.out.println("Please Enter Your Pin Number");
             String enteredPinNum = transaction.nextLine();
-            while (pinremains < 3) {
+            while (pinRemains < 3) {
                 if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                     if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                         System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
