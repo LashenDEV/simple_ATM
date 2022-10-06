@@ -36,7 +36,7 @@ public class ATMmachine {
                                     System.out.println("Oops... Incorrect Pin Number!");
                                 }
                             } else {
-                                System.out.println("Insufficient  Balance. Please Try again!");
+                                System.out.println("Insufficient Balance. Please Try again!");
                             }
 
                         } else if (userChoice == 3) {
@@ -44,7 +44,7 @@ public class ATMmachine {
                         }
                     }
                 } else {
-                    System.out.println("Wrong Pin Number! ,Please Enter Your Pin Number Again.");
+                    System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
                     enteredPinNum = transaction.nextLine();
                     pinremains++;
                 }
