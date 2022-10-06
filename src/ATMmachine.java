@@ -5,7 +5,7 @@ public class ATMmachine {
         String cardNum = "a1234b";
         String pinNum = "4321";
         double balance = 1000;
-        int pinremains = 0;
+        int pinRemains = 0;
 
         Scanner transaction = new Scanner(System.in);
 
