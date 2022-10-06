@@ -13,7 +13,7 @@ public class ATMmachine {
         String enteredCardNum = transaction.nextLine();
 
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
-            System.out.println("Please Enter Your Pin Number ");
+            System.out.println("Please Enter Your Pin Number");
             String enteredPinNum = transaction.nextLine();
             while (pinremains < 3) {
                 if (enteredPinNum.equalsIgnoreCase(pinNum)) {
