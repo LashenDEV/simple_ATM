@@ -15,42 +15,43 @@ public class ATMmachine {
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
             System.out.println("Please Enter Your Pin Number ");
             String enteredPinNum = transaction.nextLine();
-            while (pinremains < 2) {
-                System.out.println("Wrong Pin Number! ,Please Enter Your Pin Number Again.");
-                String remainingPinTimes = transaction.nextLine();
+            while (pinremains < 3) {
+                if (enteredPinNum.equalsIgnoreCase(pinNum)) {
+                    if (enteredPinNum.equalsIgnoreCase(pinNum)) {
+                        System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
+                        int userChoice = transaction.nextInt();
 
-                if (enteredPinNum.equalsIgnoreCase(pinNum) || remainingPinTimes.equalsIgnoreCase(pinNum)) {
-                    pinremains = 2;
-                    System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
-                    int userChoice = transaction.nextInt();
-
-                    if (userChoice == 1) {
-                        System.out.println("Your Current Account Balance is Rs" + balance);
-                    } else if (userChoice == 2) {
-                        System.out.println("Please Enter the Amount to Withdraw");
-                        double withdrawAmount = transaction.nextDouble();
-                        if (withdrawAmount < balance) {
-                            System.out.println("Please Enter Your Pin Number Again");
-                            String reenteredPinNum = transaction.next();
-                            if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
-                                balance -= withdrawAmount;
-                                System.out.println("You have successfully withdraw Rs." + withdrawAmount + "\nNow your balance is Rs." + balance);
+                        if (userChoice == 1) {
+                            System.out.println("Your Current Account Balance is Rs" + balance);
+                        } else if (userChoice == 2) {
+                            System.out.println("Please Enter the Amount to Withdraw");
+                            double withdrawAmount = transaction.nextDouble();
+                            if (withdrawAmount < balance) {
+                                System.out.println("Please Enter Your Pin Number Again");
+                                String reenteredPinNum = transaction.next();
+                                if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
+                                    balance -= withdrawAmount;
+                                    System.out.println("You have successfully withdraw Rs." + withdrawAmount + "\nNow your balance is Rs." + balance);
+                                } else {
+                                    System.out.println("Oops... Incorrect Pin Number!");
+                                }
                             } else {
-                                System.out.println("Oops... Incorrect Pin Number!");
+                                System.out.println("Insufficient  Balance. Please Try again!");
                             }
-                        } else {
-                            System.out.println("Insufficient  Balance. Please Try again!");
-                        }
 
-                    } else if (userChoice == 3) {
-                        System.out.println("Transaction has been canceled, Thank You!");
+                        } else if (userChoice == 3) {
+                            System.out.println("Transaction has been canceled, Thank You!");
+                        }
                     }
+                } else {
+                    System.out.println("Wrong Pin Number! ,Please Enter Your Pin Number Again.");
+                    enteredPinNum = transaction.nextLine();
+                    pinremains++;
                 }
-                pinremains++;
             }
-            System.out.println("!!!YOU HAVE ENTERED A WRONG PIN NUMBER 3 TIMES!!!");
-        }else{
+        } else {
             System.out.println("Please double check the account Number");
         }
     }
 }
+
