@@ -5,7 +5,7 @@ public class ATMmachine {
         String cardNum = "a1234b";
         String pinNum = "4321";
         double balance = 1000;
-        int pinRemains = 0;
+        int pinRemains = 1;
 
         Scanner transaction = new Scanner(System.in);
 
@@ -46,8 +46,11 @@ public class ATMmachine {
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
                     enteredPinNum = transaction.nextLine();
-                    pinremains++;
+                    pinRemains++;
                 }
+            }
+            if(pinRemains == 3){
+                System.out.println("You have entered wrong pin number three times");
             }
         } else {
             System.out.println("Please double check the account Number");
