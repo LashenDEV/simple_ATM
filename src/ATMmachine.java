@@ -5,9 +5,10 @@ public class ATMmachine {
         String cardNum = "a1234b";
         String pinNum = "4321";
         double balance = 1000;
-        int pinRemains = 1;
+        int pinRemains = 3;
 
-        Scanner transaction = new Scanner(System.in);
+        Scanner transaction;
+        transaction = new Scanner(System.in);
 
         System.out.println("Please Enter Your Card Number");
         String enteredCardNum = transaction.nextLine();
@@ -15,7 +16,7 @@ public class ATMmachine {
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
             System.out.println("Please Enter Your Pin Number");
             String enteredPinNum = transaction.nextLine();
-            while (pinRemains < 3) {
+            while (pinRemains > 0) {
                 if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                     if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                         System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
@@ -46,10 +47,10 @@ public class ATMmachine {
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
                     enteredPinNum = transaction.nextLine();
-                    pinRemains++;
+                    pinRemains--;
                 }
             }
-            if(pinRemains == 3){
+            if(pinRemains == 0){
                 System.out.println("You have entered wrong pin number three times");
             }
         } else {
