@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class ATMmachine {
     public static void main(String[] args) {
-        String cardNum = "";
-        String pinNum = "432";
-        double balance = 0;
-        int pinRemains = 0;
+        String cardNum = "a1234b";
+        String pinNum = "4321";
+        double balance = 1000;
+        int pinRemains = 1;
 
         Scanner transaction = new Scanner(System.in);
 
