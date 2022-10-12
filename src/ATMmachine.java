@@ -7,7 +7,8 @@ public class ATMmachine {
         double balance = 1000;
         int pinRemains = 1;
 
-        Scanner transaction = new Scanner(System.in);
+        Scanner transaction;
+        transaction = new Scanner(System.in);
 
         System.out.println("Please Enter Your Card Number");
         String enteredCardNum = transaction.nextLine();
