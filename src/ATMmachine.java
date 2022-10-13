@@ -27,7 +27,7 @@ public class ATMmachine {
                         } else if (userChoice == 2) {
                             System.out.println("Please Enter the Amount to Withdraw");
                             double withdrawAmount = transaction.nextDouble();
-                            if (withdrawAmount =< balance) {
+                            if (withdrawAmount <= balance) {
                                 System.out.println("Please Enter Your Pin Number Again");
                                 String reenteredPinNum = transaction.next();
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
@@ -42,7 +42,7 @@ public class ATMmachine {
 
                         } else if (userChoice == 3) {
                             System.out.println("Transaction has been canceled, Thank You!");
-                        }
+                        }break;
                     }
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
