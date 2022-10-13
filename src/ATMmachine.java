@@ -4,7 +4,7 @@ public class ATMmachine {
     public static void main(String[] args) {
         String cardNum = "a1234b";
         String pinNum = "4321";
-        double balance = 1000;
+        double balance = 2000;
         int pinRemains = 3;
 
         Scanner transaction;
@@ -42,7 +42,7 @@ public class ATMmachine {
 
                         } else if (userChoice == 3) {
                             System.out.println("Transaction has been canceled, Thank You!");
-                        }
+                        }break;
                     }
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
