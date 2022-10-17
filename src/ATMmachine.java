@@ -42,7 +42,7 @@ public class ATMmachine {
 
                         } else if (userChoice == 3) {
                             System.out.println("Transaction has been canceled, Thank You!");
-                        }
+                        }break;
                     }
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again.");
