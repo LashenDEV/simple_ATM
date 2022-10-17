@@ -32,6 +32,23 @@ public class ATMmachine {
                             if (withdrawAmount <= balance) {
                                 System.out.println("Please Enter Your Pin Number Again");
                                 String reenteredPinNum = transaction.next();
+
+                                int count = 1;
+                                try {
+                                    while (true) {
+                                        Thread.sleep(500);
+
+                                        for (int i = 0; i < count; i++)
+                                            System.out.print("*");
+                                        System.out.print("\r");
+
+                                        count++;
+                                        if (count >= 5)
+                                            break;
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
                                     balance -= withdrawAmount + 5;
                                     System.out.println(
