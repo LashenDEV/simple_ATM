@@ -32,7 +32,8 @@ public class ATMmachine {
                                 String reenteredPinNum = transaction.next();
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
                                     balance -= withdrawAmount;
-                                    System.out.println("You have successfully withdraw Rs." + withdrawAmount + "\nNow your balance is Rs." + balance);
+                                    System.out.println("You have successfully withdraw Rs." + withdrawAmount
+                                            + "\nNow your balance is Rs." + balance);
                                 } else {
                                     System.out.println("Oops... Incorrect Pin Number!");
                                 }
@@ -42,6 +43,7 @@ public class ATMmachine {
 
                         } else if (userChoice == 3) {
                             System.out.println("Transaction has been canceled, Thank You!");
+                            System.exit(userChoice);
                         }
                     }
                 } else {
@@ -50,7 +52,7 @@ public class ATMmachine {
                     pinRemains--;
                 }
             }
-            if(pinRemains == 0){
+            if (pinRemains == 0) {
                 System.out.println("You have entered wrong pin number three times");
             }
         } else {
@@ -58,4 +60,3 @@ public class ATMmachine {
         }
     }
 }
-
