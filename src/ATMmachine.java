@@ -10,11 +10,11 @@ public class ATMmachine {
         Scanner transaction;
         transaction = new Scanner(System.in);
 
-        System.out.println("Please Enter Your Card Number");
+        System.out.println("Please Enter Your Card Number :");
         String enteredCardNum = transaction.nextLine();
 
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
-            System.out.println("Please Enter Your Pin Number");
+            System.out.println("Please Enter Your Pin Number :");
             String enteredPinNum = transaction.nextLine();
             StringBuilder enteredReversedPinNum = new StringBuilder(enteredPinNum);
             StringBuilder reversedPinNum = new StringBuilder(pinNum);
@@ -52,10 +52,10 @@ public class ATMmachine {
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
                                     balance -= withdrawAmount + 5;
                                     System.out.println(
-                                            "You have successfully withdraw Rs." + withdrawAmount
+                                            "You have successfully withdraw Rs: " + withdrawAmount
                                                     + " Processing fee Rs."
                                                     + 5
-                                                    + "\nNow your balance is Rs." + balance);
+                                                    + "\nNow your balance is Rs: " + balance);
                                 } else {
                                     System.out.println("Oops... Incorrect Pin Number!");
                                 }
