@@ -21,8 +21,8 @@ public class ATMmachine {
             while (pinRemains > 0) {
                 if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                     if (enteredPinNum.equalsIgnoreCase(pinNum)) {
-                        System.out.println("\n*****  Please select one option   *****\n");
-                        System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
+                        System.out.println("\n*****  Please select one option   *****");
+                        System.out.println("------------------------------------------\n------------------------------------------\n1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel\n------------------------------------------\n------------------------------------------\n");
                         int userChoice = transaction.nextInt();
 
                         if (userChoice == 1) {
