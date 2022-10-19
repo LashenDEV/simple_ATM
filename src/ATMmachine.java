@@ -23,7 +23,7 @@ public class ATMmachine {
                         int userChoice = transaction.nextInt();
 
                         if (userChoice == 1) {
-                            System.out.println("Your Current Account Balance is Rs" + balance);
+                            System.out.println("\n*****************************\nYour Current Account Balance is Rs : " + balance+"\n*****************************\n");
                         } else if (userChoice == 2) {
                             System.out.println("Please Enter the Amount to Withdraw");
                             double withdrawAmount = transaction.nextDouble();
