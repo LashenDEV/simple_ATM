@@ -10,17 +10,18 @@ public class ATMmachine {
         Scanner transaction;
         transaction = new Scanner(System.in);
 
-        System.out.println("Please Enter Your Card Number");
+        System.out.println("Please Enter Your Card Number :");
         String enteredCardNum = transaction.nextLine();
 
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
-            System.out.println("Please Enter Your Pin Number");
+            System.out.println("Please Enter Your Pin Number :");
             String enteredPinNum = transaction.nextLine();
             StringBuilder enteredReversedPinNum = new StringBuilder(enteredPinNum);
             StringBuilder reversedPinNum = new StringBuilder(pinNum);
             while (pinRemains > 0) {
                 if (enteredPinNum.equalsIgnoreCase(pinNum)) {
                     if (enteredPinNum.equalsIgnoreCase(pinNum)) {
+                        System.out.println("\n*****  Please select one option   *****\n");
                         System.out.println("1 - Check the Balance\n2 - Money Withdraw\n3 - Cancel");
                         int userChoice = transaction.nextInt();
 
@@ -52,10 +53,10 @@ public class ATMmachine {
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
                                     balance -= withdrawAmount + 5;
                                     System.out.println(
-                                            "You have successfully withdraw Rs." + withdrawAmount
+                                            "You have successfully withdraw Rs: " + withdrawAmount
                                                     + " Processing fee Rs."
                                                     + 5
-                                                    + "\nNow your balance is Rs." + balance);
+                                                    + "\nNow your balance is Rs: " + balance);
                                 } else {
                                     System.out.println("Oops... Incorrect Pin Number!");
                                 }
@@ -69,7 +70,7 @@ public class ATMmachine {
                         }
                     }
                 } else if (reversedPinNum.reverse().toString().equals(enteredReversedPinNum.toString())) {
-                    System.out.println("Card has been blocked !!!");
+                    System.out.println("Your card has been blocked !!!");
                     System.exit(pinRemains);
                 } else {
                     System.out.println("Wrong Pin Number!, Please Enter Your Pin Number Again." + reversedPinNum
