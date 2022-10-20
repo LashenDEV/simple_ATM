@@ -53,10 +53,10 @@ public class ATMmachine {
                                 if (reenteredPinNum.equalsIgnoreCase(pinNum)) {
                                     balance -= withdrawAmount + 5;
                                     System.out.println(
-                                            "You have successfully withdraw Rs: " + withdrawAmount
-                                                    + " Processing fee Rs."
+                                            "*********************************************\n*********************************************\nYou have successfully withdraw Rs: " + withdrawAmount
+                                                    + "\nProcessing fee Rs."
                                                     + 5
-                                                    + "\nNow your balance is Rs: " + balance);
+                                                    + "\nNow your balance is Rs: " + balance+"\n*********************************************\n*********************************************\n");
                                 } else {
                                     System.out.println("Oops... Incorrect Pin Number!");
                                 }
