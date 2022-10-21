@@ -9,13 +9,15 @@ public class ATMmachine {
 
         Scanner transaction;
         transaction = new Scanner(System.in);
-
+        System.out.println("\n------------------------------------------\n");
         System.out.println("Please Enter Your Card Number :");
-        String enteredCardNum = transaction.nextLine();
 
+        String enteredCardNum = transaction.nextLine();
+        System.out.println("\n------------------------------------------\n");
         if (enteredCardNum.equalsIgnoreCase(cardNum)) {
             System.out.println("Please Enter Your Pin Number :");
             String enteredPinNum = transaction.nextLine();
+            System.out.println("\n------------------------------------------\n");
             StringBuilder enteredReversedPinNum = new StringBuilder(enteredPinNum);
             StringBuilder reversedPinNum = new StringBuilder(pinNum);
             while (pinRemains > 0) {
@@ -80,10 +82,10 @@ public class ATMmachine {
                 }
             }
             if (pinRemains == 0) {
-                System.out.println("You have entered wrong pin number three times");
+                System.out.println("**************      You have entered wrong pin number three times        **************");
             }
         } else {
-            System.out.println("Please double check the account Number");
+            System.out.println(" **************     Please double check the account Number      **************");
         }
     }
 }
