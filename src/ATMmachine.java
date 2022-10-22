@@ -26,12 +26,12 @@ public class ATMmachine {
                         int userChoice = transaction.nextInt();
 
                         if (userChoice == 1) {
-                            System.out.println("Your Current Account Balance is Rs" + balance);
+                            System.out.println("Your Current Account Balance is Rs : " + balance);
                         } else if (userChoice == 2) {
-                            System.out.println("Please Enter the Amount to Withdraw");
+                            System.out.println("Please Enter the Amount to Withdraw :");
                             double withdrawAmount = transaction.nextDouble();
                             if (withdrawAmount <= balance) {
-                                System.out.println("Please Enter Your Pin Number Again");
+                                System.out.println("Please Enter Your Pin Number Again :");
                                 String reenteredPinNum = transaction.next();
 
                                 int count = 1;
